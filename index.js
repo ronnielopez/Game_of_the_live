@@ -26,7 +26,7 @@ $(document).ready(function () {
 function cargarConfiguracinInicial() {
     canvas = document.getElementById("matrizJuego");
     context = canvas.getContext("2d");
-    canvas.widhth = canvasAncho;
+    canvas.width = canvasAncho;
     canvas.height = canvasAlto;
     matriz = construirMatriz(filas, columnas);
     cargarMatriz(matriz);
@@ -61,7 +61,7 @@ function cargarConfiguracinInicial() {
 
 function construirMatriz(filas, columnas) {
     let array = new Array(filas);
-    for (let i = 0; i < filas; i++) {
+    for (i = 0; i < filas; i++) {
         array[i] = new Array(columnas);
     }
     return array;
