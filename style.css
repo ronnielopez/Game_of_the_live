@@ -1,0 +1,48 @@
+body{
+    align-content: center;
+    background-image: radial-gradient(ellipse at center, rgba(0,0,0,0) 50%, rgba(0,0,0,0.8) 100%), url('textura.jpg'); 
+    background-repeat: repeat;
+}
+
+canvas{
+    border:1px solid #000000; 
+    padding: 10px;
+}
+
+#main{
+    display: inline-block; 
+    margin: auto; 
+    text-align: center;
+    width: 100%;
+}
+
+#buttons{
+    margin-top: 50px;
+}
+
+#canvas-container{
+    margin-top: 50px; 
+    text-align: center; 
+    width: 100%;
+}
+
+#iniciar{
+    margin-right: 320px;
+}
+
+#iniciar, #borrar, #reiniciar{
+    box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:linear-gradient(to bottom, #f9f9f9 5%, #e9e9e9 100%);
+	background-color:#f9f9f9;
+	border-radius:6px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	color:#666666;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+}
