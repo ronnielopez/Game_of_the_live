@@ -5,14 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juego de la vida</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
     <div id="main">
         <div id="buttons">
-            <button id="iniciar">iniciar</button>
-            <button id="borrar">Detener</button>
+            <button id="iniciar" class="btn btn-primary">iniciar</button>
+            <button id="borrar" class="btn btn-danger">Detener</button>
+            <button class="btn btn-warning" data-toggle="modal" data-target="#exampleModal">Opciones</button>
         </div>
 
         <div id="canvas-container">
@@ -20,10 +24,35 @@
         </div>
 
         <div id="buttons">
-            <button id="reiniciar">Reiniciar</button>
+            <button class="btn btn-primary" id="reiniciar">Reiniciar</button>
         </div>
     </div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title text-center" id="exampleModalLabel">Opciones</h2>
+        </div>
+        <div class="modal-body">
+          <h5>Configuraciones</h5> 
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">cerrar</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Guardar cambios</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--FIn del modal-->
+
+
     <script src="jquery-3.5.1.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
     <script src="index.js"></script>
 </body>
 

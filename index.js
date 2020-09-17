@@ -3,6 +3,8 @@ var context;
 var canvasAlto = 500;
 var canvasAncho = 500;
 
+var palabra = "hola";
+
 var matriz;
 var filas = 25;
 var columnas = 25;
@@ -42,7 +44,6 @@ function cargarConfiguracinInicial() {
             let yPixel = event.offsetY - 10;
             let xColumna = Math.floor(xPixel / xAnchoCasilla);
             let yFila = Math.floor(yPixel / yAltoCasilla);
-
             const desdePosicionX = xColumna * xAnchoCasilla;
             const desdePosicionY = yFila * yAltoCasilla;
 
@@ -50,6 +51,7 @@ function cargarConfiguracinInicial() {
 
             context.fillStyle = matriz[xColumna][yFila];
             context.fillRect(desdePosicionX, desdePosicionY, xAnchoCasilla, yAltoCasilla);
+
         }
     });
 
@@ -158,7 +160,6 @@ function recalcularEscenario(matriz) {
 
 
 function evalua(xColumna, yFila) {
-
     if (xColumna > 0 && yFila > 0) {
         if (xColumna < matriz.length && yFila < matriz.length) {
             if (matriz[xColumna][yFila] != null && matriz[xColumna][yFila] != "undefined") {
