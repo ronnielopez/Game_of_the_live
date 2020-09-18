@@ -160,18 +160,79 @@ function recalcularEscenario(matriz) {
 
 
 function evalua(xColumna, yFila) {
-    if (xColumna > 0 && yFila > 0) {
-        if (xColumna < matriz.length && yFila < matriz.length) {
-            if (matriz[xColumna][yFila] != null && matriz[xColumna][yFila] != "undefined") {
-                if (matriz[xColumna][yFila] === colorVivo) {
-                    return 1;
+    if (xColumna > 0) {
+        if (yFila > 0) {
+            if(xColumna < matriz.length){
+                if(yFila < matriz.length){
+                        if (matriz[xColumna][yFila] === colorVivo) {
+                            return 1;
+                        }
+                        else {
+                            return 0;
+                        }
+
+                }else if(yFila === matriz[0].length){
+                    yFila = 1;
+                    if (xColumna > 0) {
+                        if (yFila > 0) {
+                            if(xColumna < matriz.length){
+                                    if (matriz[xColumna][yFila] === colorVivo) {
+                                        return 1;
+                                    }
+                                    else {
+                                        return 0;
+                                    }
+                            }
+                        }
+                    }
+                    
                 }
-                else {
-                    return 0;
+            }else if(xColumna === matriz.length){
+                xColumna = 1;
+                if (xColumna > 0) {
+                    if (yFila > 0) {
+                            if(yFila < matriz.length){
+                                if (matriz[xColumna][yFila] === colorVivo) {
+                                    return 1;
+                                }
+                                else {
+                                    return 0;
+                                }
+                            }
+                        }
                 }
             }
+        } else {
+            yFila = matriz[0].length -1;
+            if (xColumna > 0) {
+                    if(xColumna < matriz.length){
+                        if(yFila < matriz.length){
+                            if (matriz[xColumna][yFila] === colorVivo) {
+                                return 1;
+                            }
+                            else {
+                                return 0;
+                            }
+                        }
+                    }
+            }
         }
+    } else {
+        xColumna = matriz.length -1;
+            if (yFila > 0) {
+                if(xColumna < matriz.length){
+                    if(yFila < matriz.length){
+                        if (matriz[xColumna][yFila] === colorVivo) {
+                            return 1;
+                        }
+                        else {
+                            return 0;
+                        }
+                    }
+                }
+            }
     }
+
 }
 
 
